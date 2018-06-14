@@ -68,18 +68,29 @@ body {
   margin-left: 150px;
 }
 
-#images {
+#portfolio {
   margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   grid-gap: 10px;
 }
 
-#images li {
+#portfolio li {
+  position: relative;
   background-color: black;
-  padding: 40px;
+  display: block;
+  width: 150px;
+  height: 150px;
   font-size: 14px;
   list-style-type: none;
+  color: white;
+  margin-right: 10px;
+}
+
+#portfolio li span {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
 }
 
 .info {

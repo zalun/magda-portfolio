@@ -103,8 +103,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# supervisor
-giger_api/supervisord.pid
-
-# Flask secret configuration
-giger_api/secret.py
+# portfolio images
+static/img/portfolio

@@ -6,8 +6,8 @@
     <div class="wrapper">
       <div class="sidebar">
         <ul id="menu">
-          <li><a href="/portfolio" class="link on" id="link-portfolio">Portfolio</a></li>
-          <li><a href="/contact" class="link" id="link-contact">Contact</a></li>
+          <li><a href="#portfolio" class="link on" id="link-portfolio">Portfolio</a></li>
+          <li><a href="#contact" class="link" id="link-contact">Contact</a></li>
           <li><a href="" class="link" id="link-instagram">Instagram</a></li>
         </ul>
       </div>
@@ -15,16 +15,15 @@
         <p id="logo">
           Magda Zalewa
         </p>
-        <ul id="images">
-          <li>A</li>
-          <li>B</li>
-          <li>C</li>
-          <li>D</li>
-          <li>E</li>
-          <li>F</li>
+        <ul id="portfolio">
+          {% for image in images %}
+          <li>
+            <a href="{{ url_for('static', filename=image[1]) }}">{{ image[0][1] }}</a>
+          </li>
+          {% endfor %}
         </ul>
       </div>
-      <div class="info"></div>
+      <div id="contact">CONTACT</div>
     </div>
   </body>
 </html>
